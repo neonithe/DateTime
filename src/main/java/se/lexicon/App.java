@@ -9,8 +9,7 @@ import java.time.temporal.ChronoUnit;
 import java.util.regex.Pattern;
 
 /**
- * Hello world!
- *
+ * Date Time examples
  */
 public class App 
 {
@@ -18,6 +17,7 @@ public class App
     {
         //Ex nr 14 - Not done
         ex16();
+        //ex_Extra();
     }
     public static void ex1(){
         // Create a LocalDate of the current day and print it out
@@ -162,5 +162,9 @@ public class App
         System.out.println("LocalDateTime: "+dateTime);
         System.out.println("LocalDate: "+date);
         System.out.println("LocalTime: "+time.getHour()+":"+time.getMinute()+":"+time.getSecond());
+    }
+    public static void ex_Extra(){
+        // Create your own calendar for the year 2018
+
     }
 }
