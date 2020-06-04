@@ -15,9 +15,7 @@ public class App
 {
     public static void main( String[] args )
     {
-        //Ex nr 14 - Not done
-        ex16();
-        //ex_Extra();
+        ex1();
     }
     public static void ex1(){
         // Create a LocalDate of the current day and print it out
@@ -126,10 +124,13 @@ public class App
         // Using DateTimeFormatter format the LocalDateTime object from exercise 11 to a
         // String that should look tile this: torsdag 5 april 10:00
         DateTimeFormatter format = DateTimeFormatter.ofPattern("EEEE dd MMMM HH:mm");
+        DateTimeFormatter format2 = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm");
         /** ALT 1 **/
-        String time = "torsdag 5 april 10:00";
-       // LocalDateTime toString2 = LocalDateTime.parse(time,format);
-       // System.out.println(toString2);
+        String dateTime = "2020-01-01 08:00";
+        LocalDateTime toString2 = LocalDateTime.parse(dateTime, format2);
+        String toString3 = toString2.format(format);
+        System.out.println(toString3);
+
 
         /** ALT 2 **/
         LocalDateTime date = LocalDateTime.now();
@@ -162,9 +163,5 @@ public class App
         System.out.println("LocalDateTime: "+dateTime);
         System.out.println("LocalDate: "+date);
         System.out.println("LocalTime: "+time.getHour()+":"+time.getMinute()+":"+time.getSecond());
-    }
-    public static void ex_Extra(){
-        // Create your own calendar for the year 2018
-
     }
 }
